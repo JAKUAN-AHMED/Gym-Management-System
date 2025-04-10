@@ -22,4 +22,10 @@ const deleteClass=async(id:string)=>{
   console.log(id);
   return await ClassModel.findByIdAndDelete(id);
 }
-export const AdminServices = {changeRole,deleteUser,deleteClass};
+
+
+//get all class
+const allclass=async()=>{
+  return await ClassModel.find();
+}
+export const AdminServices = {changeRole,deleteUser,deleteClass,allclass};

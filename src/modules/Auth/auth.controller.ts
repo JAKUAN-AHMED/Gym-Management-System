@@ -63,4 +63,30 @@ const changePass=catchAsync(async(req,res)=>{
      });
     
 })
-export const AuthController={registerUser,loginUser,changePass}
+
+
+//logout
+ const logout = catchAsync(async (req, res) => {
+   if (req.cookies.refreshToken && req.headers.authorization) {
+     res.clearCookie('refreshToken', {
+       httpOnly: true,
+       secure: process.env.NODE_ENV === 'production',
+       sameSite: 'strict',
+     });
+
+     sendResponse(res, {
+       statusCode: 200,
+       success: true,
+       message: 'Logout successful',
+       Data: [],
+     });
+   } else {
+     sendResponse(res, {
+       statusCode: 400,
+       success: false,
+       message: 'No token found. User is not logged in.',
+       Data: [],
+     });
+   }
+ });
+export const AuthController={registerUser,loginUser,changePass,logout}

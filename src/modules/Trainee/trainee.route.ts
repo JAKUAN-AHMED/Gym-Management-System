@@ -6,12 +6,12 @@ import { TraineeController } from './trainee.controller';
 const router = Router();
 router.patch(
   '/booking-class/:schedule_classId',
-  auth(USER_ROLE.trainee),
+  auth(USER_ROLE.trainee,USER_ROLE.admin),
   TraineeController.bookClass,
 );
 router.patch(
   '/cancel-booking/:schedule_classId',
-  auth(USER_ROLE.trainee),
+  auth(USER_ROLE.trainee,USER_ROLE.admin),
   TraineeController.cancelBooking,
 );
 

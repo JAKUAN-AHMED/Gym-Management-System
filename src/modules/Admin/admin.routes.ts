@@ -23,4 +23,9 @@ router.post('/schedule/:classId',auth(USER_ROLE.admin),ClassController.createSch
 
 //delete class
 router.delete('/:classId',auth('admin'),AdminController.deleteClass);
+
+//allclass
+router.get('/allclass',auth('admin','trainer','trainee'),AdminController.allclass)
+
+
 export const AdminRoutes=router;

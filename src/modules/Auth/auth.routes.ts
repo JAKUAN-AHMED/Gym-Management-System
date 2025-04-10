@@ -23,10 +23,8 @@ router.post(
 );
 
 //logout
-// router.post('/logout', AuthController.logout);
+router.post('/logout',auth('admin','trainee','trainer') ,AuthController.logout);
 
-//refresh token
-// router.post('/refresh-token', AuthController.refreshToken);
 
 //Change pass
 router.patch('/change-pass',auth(USER_ROLE.admin,USER_ROLE.trainee,USER_ROLE.trainee) ,AuthController.changePass);

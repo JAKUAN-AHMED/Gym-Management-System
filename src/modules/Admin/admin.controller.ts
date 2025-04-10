@@ -51,4 +51,17 @@ const deleteClass=catchAsync(async(req,res)=>{
     Data: isTrue ? deleteClass : [],
   });
 })
-export const AdminController={changeRole,deleteUser,deleteClass};
+
+//all class
+const allclass=catchAsync(async(req,res)=>{
+  const result=await AdminServices.allclass();
+  sendResponse(res, {
+    statusCode: result ? 200 : 500,
+    success: result? true :false,
+    message: result
+      ? 'got all  classes successfully!'
+      : 'failed to  get class!',
+    Data: result ? result : [],
+  });
+})
+export const AdminController={changeRole,deleteUser,deleteClass,allclass};

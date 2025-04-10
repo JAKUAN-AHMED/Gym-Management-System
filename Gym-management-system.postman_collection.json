@@ -1,0 +1,1195 @@
+{
+	"info": {
+		"_postman_id": "79207c61-e163-4ad5-85d1-de72d31f3160",
+		"name": "Gym-management-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "40097709",
+		"_collection_link": "https://axionasdf.postman.co/workspace/1f4662b7-feb9-4164-af6d-ec3ce9965e14/collection/40097709-79207c61-e163-4ad5-85d1-de72d31f3160?action=share&source=collection_link&creator=40097709"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"rahul\",\r\n    \"email\":\"rahul@gmail.com\",\r\n    \"password\":\"rahul123\",\r\n    \"phone\":\"01870540683\",\r\n    \"address\":\"sunamganj,sylhet\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/register"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"mahit\",\r\n    \"email\":\"mahit@gmail.com\",\r\n    \"password\":\"mahit123\",\r\n    \"phone\":\"01870540683\",\r\n    \"address\":\"sunamganj,sylhet\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "372"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"174-ZMyzzZNLP913zb49r0egPa7+VgE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 13:42:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Congratulation to the new World!\",\n    \"data\": {\n        \"name\": \"mahit\",\n        \"email\": \"mahit@gmail.com\",\n        \"password\": \"$2b$10$qVXZWYCrjOdgiW8zMsSfJulEN7z7VTyxk/GAKZ89V1Strc9tW7LOS\",\n        \"role\": \"trainee\",\n        \"phone\": \"01870540683\",\n        \"address\": \"sunamganj,sylhet\",\n        \"_id\": \"67f7caa84d5a35042cd27480\",\n        \"createdAt\": \"2025-04-10T13:42:00.925Z\",\n        \"updatedAt\": \"2025-04-10T13:42:00.925Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ruman@gmail.com\",\r\n    \"password\":\"ruman123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/login"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"mahit@gmail.com\",\r\n    \"password\":\"mahit123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1haGl0QGdtYWlsLmNvbSIsInJvbGUiOiJ0cmFpbmVlIiwiaWF0IjoxNzQ0MjkyNTc1LCJleHAiOjE3NDUxNTY1NzV9.xqDZ4NeY1wOAdxdKIxLiRR-bg44odqZ3w6s2ir5sAB8; Max-Age=31536000; Path=/; Expires=Fri, 10 Apr 2026 13:42:55 GMT; HttpOnly; SameSite=None"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "250"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fa-pPznpkgm+kohrWhbwNVLxLkFFxI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 13:42:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"login successful\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1haGl0QGdtYWlsLmNvbSIsInJvbGUiOiJ0cmFpbmVlIiwiaWF0IjoxNzQ0MjkyNTc1LCJleHAiOjE3NzU4Mjg1NzV9.L1SWxcuID_RGYQQAv_7jJ0iohEdH2N0uM534JFGZ95A\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Change-Password",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ admin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldpassword\":\"admin000\",\r\n    \"newpassword\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/auth/change-pass"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impha3VhbnVsdGltYXRlNzc3QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NDI5MzM4OSwiZXhw...",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldpassword\":\"admin000\",\r\n    \"newpassword\":\"admin123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://management-system-xi-eight.vercel.app/api/auth/change-pass"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a-L9YbGphB6pR7+6mZZZ4zLH6kHA4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 14:01:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"password changed successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "LogOut",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1bWFuQGdtYWlsLmNvbSIsInJvbGUiOiJ0cmFpbmVyIiwiaWF0IjoxNzQ0MzA3MjM5LCJleHAiOjE3NzU4NDMyMzl9.R3ZnUbFTTvmg-RLWRCTdZ6bw9Sjdd3M2MsA9BoOB5Ns",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/auth/logout"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJ1bWFuQGdtYWlsLmNvbSIsInJvbGUiOiJ0cmFpbmVyIiwiaWF0IjoxNzQ0MzA3MjM5LCJleHAiOjE3NzU4NDMyMzl9.R3ZnUbFTTvmg-RLWRCTdZ6bw9Sjdd3M2MsA9BoOB5Ns",
+										"type": "text"
+									}
+								],
+								"url": "https://management-system-xi-eight.vercel.app/api/auth/logout"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "refreshToken=; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-axw3cCU8gh4MyoZQjRbQ2NTli9g\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 17:49:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Logout successful\",\n    \"data\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "manage-user",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ admin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\":\"trainee\",\r\n    \"phone\":\"03432432432\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:5000/api/admin/manage-user/67f7caa84d5a35042cd27480"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impha3VhbnVsdGltYXRlNzc3QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NDI5MzM4OSwiZXhw...",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"role\":\"trainee\",\r\n    \"phone\":\"03432432432\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:5000/api/admin/manage-user/67f7caa84d5a35042cd27480"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "379"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"17b-jv3X7BbjXAgJi5Qnd80Jru4tmM4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 14:05:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"user changed into trainee  successfully\",\n    \"data\": {\n        \"_id\": \"67f7caa84d5a35042cd27480\",\n        \"name\": \"mahit\",\n        \"email\": \"mahit@gmail.com\",\n        \"password\": \"$2b$10$qVXZWYCrjOdgiW8zMsSfJulEN7z7VTyxk/GAKZ89V1Strc9tW7LOS\",\n        \"role\": \"trainee\",\n        \"phone\": \"03432432432\",\n        \"address\": \"sunamganj,sylhet\",\n        \"createdAt\": \"2025-04-10T13:42:00.925Z\",\n        \"updatedAt\": \"2025-04-10T14:05:15.219Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ admin}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/admin/delete-user/67f7caa84d5a35042cd27480"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impha3VhbnVsdGltYXRlNzc3QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NDI5MzM4OSwiZXhw...",
+										"type": "text"
+									}
+								],
+								"url": "https://management-system-xi-eight.vercel.app/api/admin/delete-user/67f7caa84d5a35042cd27480"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-EdpNBJSRGznqf69gHmYfNsh2lmc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 14:07:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"user deleted  successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create-class",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ admin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"run\",\r\n    \"description\":\"A dynamic and relaxing run session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/admin/create-class"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Yoga Flow\",\r\n    \"description\":\"A dynamic and relaxing yoga session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/admin/create-class"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "321"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"141-odRfNq8CCoY7Q0rp5NnwybZSIew\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 13:30:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Yoga Flow class created successfully\",\n    \"data\": {\n        \"name\": \"Yoga Flow\",\n        \"description\": \"A dynamic and relaxing yoga session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\",\n        \"_id\": \"67f7c7d74d5a35042cd2747d\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "schedule-class",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ admin}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trainerId\": \"67f79c70dd1fd07cfd955aec\",\r\n    \"schedule\": {\r\n        \"date\": \"2025-04-11\",\r\n        \"startTime\": \"06:00\",\r\n        \"endTime\": \"08:00\",\r\n        \"trainees\": [\r\n            \"67f7c04e48d3f4f35b5a3079\"\r\n        ]\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/admin/schedule/67f7f27875285f9cddaa2c07"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{admin}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"trainerId\": \"67f79c70dd1fd07cfd955aec\",\r\n    \"schedule\": {\r\n        \"date\": \"2025-04-11\",\r\n        \"startTime\": \"08:00\",\r\n        \"endTime\": \"10:00\",\r\n        \"trainees\": [\r\n            \"67f7c04e48d3f4f35b5a3079\"\r\n        ]\r\n    }\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/admin/schedule/67f7a30cc93de791574cc853"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "468"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d4-g+2M12ipzgzaBDM+8RTvB35AeHQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 13:14:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Class scheduled successfully\",\n    \"data\": {\n        \"className\": \"Yoga Flow\",\n        \"description\": \"A dynamic and relaxing yoga session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\",\n        \"trainerId\": \"67f79c70dd1fd07cfd955aec\",\n        \"schedule\": {\n            \"date\": \"2025-04-11\",\n            \"startTime\": \"08:00\",\n            \"endTime\": \"10:00\",\n            \"trainees\": [\n                \"67f7c04e48d3f4f35b5a3079\"\n            ]\n        },\n        \"_id\": \"67f7c4194d5a35042cd2747a\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete-class",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ admin}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/admin/67f7c7d74d5a35042cd2747d"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Impha3VhbnVsdGltYXRlNzc3QGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NDI5MzM4OSwiZXhw...",
+										"type": "text"
+									}
+								],
+								"url": "https://management-system-xi-eight.vercel.app/api/admin/67f7c7d74d5a35042cd2747d"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-l+7dt1JjuRaR8R73qmgmSNLM9Ro\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 16:30:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Delete a class successfully!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trainee",
+			"item": [
+				{
+					"name": "book-class",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{trainee}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"traineeId\":\"67f7e5c55938c7a1d7092067\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/trainee/booking-class/67f7c2d3cd5c429f4266525c"
+					},
+					"response": [
+						{
+							"name": "400",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{trainee}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"traineeId\":\"67f7e5c55938c7a1d7092067\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/trainee/booking-class/67f7c2d3cd5c429f4266525c"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72-8fn4dIR+JJrcEWyC+7j9SKcaYMU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 15:55:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"message\": \"Already Booked\",\n    \"errorDetails\": [\n        {\n            \"field\": \"\",\n            \"message\": \"Already Booked\"\n        }\n    ],\n    \"stack\": null\n}"
+						},
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{trainee}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"traineeId\":\"67f7e5c55938c7a1d7092067\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/trainee/booking-class/67f7c2d3cd5c429f4266525c"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "498"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f2-sxG8ikVSi8HD1gJ2/Xq8I9qT7X0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 16:04:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Booking successfully Completed!\",\n    \"data\": {\n        \"schedule\": {\n            \"date\": \"2025-04-11\",\n            \"startTime\": \"10:00\",\n            \"endTime\": \"12:00\",\n            \"trainees\": [\n                \"67f7e5ab9c8efeba0e8bff3f\",\n                \"67f7e5c55938c7a1d7092067\"\n            ]\n        },\n        \"_id\": \"67f7c2d3cd5c429f4266525c\",\n        \"className\": \"Yoga Flow\",\n        \"description\": \"A dynamic and relaxing yoga session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\",\n        \"trainerId\": \"67f79c70dd1fd07cfd955aec\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "cancel-booking",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{trainee}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"traineeId\":\"67f7e5c55938c7a1d7092067\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseUrl}}/trainee/cancel-booking/67f7c2d3cd5c429f4266525c"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{trainee}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"traineeId\":\"67f7e5c55938c7a1d7092067\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/trainee/cancel-booking/67f7c2d3cd5c429f4266525c"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "479"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1df-dnc8mUFsE/Eiz9EbFtC0CStsrf8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 16:03:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"cancelled Booking a class successfully!\",\n    \"data\": {\n        \"schedule\": {\n            \"date\": \"2025-04-11\",\n            \"startTime\": \"10:00\",\n            \"endTime\": \"12:00\",\n            \"trainees\": [\n                \"67f7e5ab9c8efeba0e8bff3f\"\n            ]\n        },\n        \"_id\": \"67f7c2d3cd5c429f4266525c\",\n        \"className\": \"Yoga Flow\",\n        \"description\": \"A dynamic and relaxing yoga session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\",\n        \"trainerId\": \"67f79c70dd1fd07cfd955aec\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trainer",
+			"item": [
+				{
+					"name": "my-scheduled-class",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{trainer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/trainer/trainerclasses/"
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{trainer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{baseUrl}}/trainer/trainerclasses/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "http://localhost:5173"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "881"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"371-nyV1VmxKkBIBNuobBVsK9rKWksI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Apr 2025 17:50:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"got my scheduled data successfully\",\n    \"data\": [\n        {\n            \"schedule\": {\n                \"date\": \"2025-04-11\",\n                \"startTime\": \"08:00\",\n                \"endTime\": \"10:00\",\n                \"trainees\": [\n                    \"67f7c04e48d3f4f35b5a3079\"\n                ]\n            },\n            \"_id\": \"67f7c4194d5a35042cd2747a\",\n            \"className\": \"Yoga Flow\",\n            \"description\": \"A dynamic and relaxing yoga session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\",\n            \"trainerId\": \"67f79c70dd1fd07cfd955aec\",\n            \"__v\": 0\n        },\n        {\n            \"schedule\": {\n                \"date\": \"2025-04-11\",\n                \"startTime\": \"06:00\",\n                \"endTime\": \"08:00\",\n                \"trainees\": [\n                    \"67f7c04e48d3f4f35b5a3079\"\n                ]\n            },\n            \"_id\": \"67f7f2a775285f9cddaa2c0f\",\n            \"className\": \"Push Up\",\n            \"description\": \"A dynamic and relaxing push up session designed to improve flexibility, balance, and mindfulness. Great for all levels, this class focuses on breathwork and gentle movements\",\n            \"trainerId\": \"67f79c70dd1fd07cfd955aec\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Classes",
+			"item": [
+				{
+					"name": "all-classes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{ admin}}",
+								"type": "text"
+							}
+						],
+						"url": "{{baseUrl}}/admin/allclass"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
