@@ -1,3 +1,5 @@
+import catchAsync from '../../utitlity/catchAsync';
+import { ClassModel, ScheduleClass } from '../Class/class.model';
 import { IUser } from '../User/user.interface';
 import { UserModel } from '../User/user.model';
 
@@ -14,4 +16,10 @@ const changeRole = async (id: string, payload: Partial<IUser>) => {
 const deleteUser=async(id:string)=>{
   return await UserModel.findByIdAndDelete(id);
 }
-export const AdminServices = {changeRole,deleteUser};
+
+//delete class
+const deleteClass=async(id:string)=>{
+  console.log(id);
+  return await ClassModel.findByIdAndDelete(id);
+}
+export const AdminServices = {changeRole,deleteUser,deleteClass};

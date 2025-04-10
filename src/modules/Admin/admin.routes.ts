@@ -19,4 +19,8 @@ router.post('/create-class',auth(USER_ROLE.admin),validateRequest(ClassValidatio
 
 //schedule class
 router.post('/schedule/:classId',auth(USER_ROLE.admin),ClassController.createScheduleClass)
+
+
+//delete class
+router.delete('/:classId',auth('admin'),AdminController.deleteClass);
 export const AdminRoutes=router;

@@ -1,5 +1,7 @@
+import AppError from "../../errors/AppError";
 import catchAsync from "../../utitlity/catchAsync";
 import sendResponse from "../../utitlity/sendResponse";
+import { ClassModel, ScheduleClass } from "../Class/class.model";
 import { AdminServices } from "./admin.services";
 
 
@@ -27,4 +29,26 @@ const deleteUser=catchAsync(async(req,res)=>{
       : 'User Not Found',
   });
 })
-export const AdminController={changeRole,deleteUser};
+
+
+//delete class
+const deleteClass=catchAsync(async(req,res)=>{
+  const classId = req.params.classId;
+  //check class exist or not
+  const isExistClass = await ClassModel.findById(classId);
+  if (!isExistClass) {
+    throw new AppError(false, 404, 'class not found');
+  }
+  const deletedClass = await AdminServices.deleteClass(classId);
+  const isTrue: boolean = deletedClass ? true : false;
+
+  sendResponse(res, {
+    statusCode: isTrue ? 200 : 500,
+    success: isTrue,
+    message: isTrue
+      ? 'Delete a class successfully!'
+      : 'failed to  delete class!',
+    Data: isTrue ? deleteClass : [],
+  });
+})
+export const AdminController={changeRole,deleteUser,deleteClass};
