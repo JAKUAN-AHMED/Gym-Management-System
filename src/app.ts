@@ -3,6 +3,8 @@ const app = express();
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import router from './router/routes';
+import NotFound from './middlewares/NotFound';
+import globalErrorHandler from './middlewares/globalErrorHandler';
 app.use(express.json());
 app.use(cookieParser());
 const corsOptions = {
@@ -25,9 +27,9 @@ app.use('/api', router);
 
 //
 //gloabal err handler
-// app.use(globalErrorHandler);
+app.use(globalErrorHandler);
 
 //Not Found Route
-// app.use(NotFound);
+app.use(NotFound);
 
 export default app;
