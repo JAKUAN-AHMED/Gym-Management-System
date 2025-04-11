@@ -53,7 +53,7 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 | Backend        | Node.js, Express.js, TypeScript     |
 | Database       | MongoDB, Mongoose                   |
 | Authentication | JWT                                 |
-| Deployment     | Vercel (Client), Render (Server)    |
+| Deployment     | Vercel     |
 | API Testing    | Postman                             |
 
 ---
@@ -71,9 +71,9 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 |-----------------|----------|-----------------------------------------|
 | `className`     | String   | Name of the scheduled class             |
 | `schedule.date` | Date     | Date of class                           |
-| `startTime`     | String   | Start time                              |
-| `endTime`       | String   | End time                                |
-| `trainees`      | [IDs]    | List of booked trainee IDs (max 10)     |
+| `schedule.startTime`     | String   | Start time                              |
+| `schedule.endTime`       | String   | End time                                |
+| `schedule.trainees`      | [IDs]    | List of booked trainee IDs (max 10)     |
 
 ### 👤 User Model
 | Field     | Type     | Description                     |
@@ -97,11 +97,12 @@ POST   /api/auth/logout         // Logout
 
 👨‍💼 Admin Routes
 ```http
-POST   /api/class/create             // Create new class
-DELETE /api/class/:id                // Delete class
+POST   /api/admin/create-class             // Create new class
+DELETE /api/admin/:classId                // Delete class
 GET    /api/admin/allclass           // View all classes
-POST   /api/auth/create-user         // Create Admin/Trainer
-GET    /api/auth/all-user            // View all users
+POST /api/schedule/:classId        //schedule a class
+PATCH /api/manage-user/:id       //manage user like changing role
+DELETE /api/delete-user/:userId // delete a user by id
 ```
 🧑‍🏫 Trainer Routes
 ```http
@@ -109,9 +110,9 @@ GET    /api/trainer/trainerclasses   // Get trainer-assigned classes
 ```
 🧑‍🎓 Trainee Routes
 ```http
-GET    /api/class/all                // View all available classes
-PATCH  /api/class/:id                // Book class
-PATCH  /api/class/:id/cancel         // Cancel booking
+GET    /api/admin/allclass                // View all available classes
+PATCH  /api/booking-class/:schedule_classId    // Book class
+PATCH  /api/cancel-booking/:schedule_classId        // Cancel booking
 ```
 🧪 Test Credentials
 🔐 Admin
