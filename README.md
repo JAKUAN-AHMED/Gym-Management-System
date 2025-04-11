@@ -88,7 +88,7 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 
 ## 🔐🔗 API Base URL
 ```http
-http://localhost:5000/api
+https://management-system-xi-eight.vercel.app/api
 ```
 
 ## 🔐 Authentication Endpoints
