@@ -86,33 +86,38 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 
 ---
 
+## 🔐🔗 API Base URL
+```http
+http://localhost:5000/api
+```
+
 ## 🔐 Authentication Endpoints
 
 ```http
-POST   /api/auth/register       // Register new trainee
-POST   /api/auth/login          // Login with email & password
-PATCH  /api/auth/change-pass    // Change password
-POST   /api/auth/logout         // Logout
+POST   /auth/register       // Register new trainee
+POST   /auth/login          // Login with email & password
+PATCH  /auth/change-pass    // Change password
+POST   /auth/logout         // Logout
 ```
 
 👨‍💼 Admin Routes
 ```http
-POST   /api/admin/create-class             // Create new class
-DELETE /api/admin/:classId                // Delete class
-GET    /api/admin/allclass           // View all classes
-POST /api/schedule/:classId        //schedule a class
-PATCH /api/manage-user/:id       //manage user like changing role
-DELETE /api/delete-user/:userId // delete a user by id
+POST   /admin/create-class             // Create new class
+DELETE /admin/:classId                // Delete class
+GET    /admin/allclass           // View all classes
+POST /admin/schedule/:classId        //schedule a class
+PATCH /admin/manage-user/:id       //manage user like changing role
+DELETE /admin/delete-user/:userId // delete a user by id
 ```
 🧑‍🏫 Trainer Routes
 ```http
-GET    /api/trainer/trainerclasses   // Get trainer-assigned classes
+GET    /trainer/trainerclasses   // Get trainer-assigned classes
 ```
 🧑‍🎓 Trainee Routes
 ```http
-GET    /api/admin/allclass                // View all available classes
-PATCH  /api/booking-class/:schedule_classId    // Book class
-PATCH  /api/cancel-booking/:schedule_classId        // Cancel booking
+GET    /admin/allclass                // View all available classes
+PATCH  /trainee/booking-class/:schedule_classId    // Book class
+PATCH  /trainee/cancel-booking/:schedule_classId        // Cancel booking
 ```
 🧪 Test Credentials
 🔐 Admin
