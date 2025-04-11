@@ -133,7 +133,7 @@ Password: ruman123
 🧑‍🎓 Trainee
 ```graphql
 Email: nahin@gmail.com  
-Password: nahiyan@gmail.com
+Password: nahiyan123
 ```
 ```bash
 🧰 Local Development Setup
