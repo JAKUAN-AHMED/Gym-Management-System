@@ -85,9 +85,9 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 | `address` | String   | Address                         |
 
 ---
-## 🔐API Documentation 
+## 🔰API Documentation 
 
-## 🔐🔗 API Base URL
+## 🔗 API Base URL
 ```http
 https://management-system-xi-eight.vercel.app/api
 ```
