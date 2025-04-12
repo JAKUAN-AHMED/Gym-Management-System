@@ -27,7 +27,7 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 - 👥 Bookings with capacity limits (max 10/class)
 - 👤 Admin panel to manage users and classes
 - 🔄 Realtime class availability & booking
-- 🔒 Protected routes and middleware
+- ◻️Not Found and global validation features also Multiple Error handling perfectly 
 
 ---
 
