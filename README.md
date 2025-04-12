@@ -1,6 +1,6 @@
 # 🏋️‍♂️ Gym Management System — [Class Scheduling & Membership]
 
-🚀 **Live Demo**: [Visit App](https://management-system-xi-eight.vercel.app/)  
+🚀 **Live Link**: [Visit App](https://management-system-xi-eight.vercel.app/)  
 📬 **Postman API Collection**: [View Collection](https://documenter.getpostman.com/view/40097709/2sB2cYbKi8)
 
 📁 ER Diagram
@@ -85,6 +85,7 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 | `address` | String   | Address                         |
 
 ---
+## 🔐API Documentation 
 
 ## 🔐🔗 API Base URL
 ```http
