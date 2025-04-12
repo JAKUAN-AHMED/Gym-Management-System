@@ -69,7 +69,8 @@ A powerful RESTful API for managing gym classes, schedules, and user bookings wi
 ### 📅 Schedule Model
 | Field           | Type     | Description                             |
 |-----------------|----------|-----------------------------------------|
-| `className`     | String   | Name of the scheduled class             |
+| `className`     | String   | Name of the scheduled class
+| `description`     | String   | description  of the  class             |
 | `schedule.date` | Date     | Date of class                           |
 | `schedule.startTime`     | String   | Start time                              |
 | `schedule.endTime`       | String   | End time                                |
