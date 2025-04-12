@@ -134,7 +134,7 @@ Password: ruman123
 ```
 🧑‍🎓 Trainee
 ```graphql
-Email: nahin@gmail.com  
+Email: nahiyan@gmail.com  
 Password: nahiyan123
 ```
 ```bash
