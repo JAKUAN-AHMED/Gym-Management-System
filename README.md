@@ -163,8 +163,7 @@ JWT_REFRESH_TOKEN_EXPIRES=times
 4️⃣ Run Server
 ```bash
 npm run start:dev
-🔗 API Base URL
-http://localhost:5000/api
+
 Use Postman, Thunder Client, or Insomnia for testing.
 ```
 
